@@ -30,7 +30,8 @@
   border: 0;
   background: rgb(255, 255, 255);
 }
-.wpcf7-form ::-webkit-input-placeholder {
+.wpcf7-form ::-webkit-input-placeholder,
+.wpcf7-form ::placeholder {
   color: $color-black;
   opacity: 1;
 }
@@ -69,7 +70,7 @@ span.wpcf7-not-valid-tip {
   margin-bottom: 15px;
   padding: 15px 42px;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-family: $default-header;
 }
 .wpcf7-form .button:hover {
   cursor: pointer;
@@ -91,7 +92,8 @@ span.wpcf7-not-valid-tip {
     text-transform: uppercase;
   }
 }
-.mc4wp-form ::-webkit-input-placeholder {
-  color: $color-white;
+.mc4wp-form ::-webkit-input-placeholder,
+.mc4wp-form ::placeholder {
+  color: $color-black;
   opacity: 1;
 }

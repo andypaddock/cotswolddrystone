@@ -2,7 +2,6 @@
 //@prepros-prepend mixitup-pagination.js
 //@prepros-prepend fslightbox.js
 //@prepros-prepend owl.carousel.min.js
-//@prepros-prepend readmore.js
 //@prepros-prepend scrollreveal.js
 
 jQuery(document).ready(function($) {
@@ -64,15 +63,29 @@ $(".testimonial-carousel").owlCarousel({
 
 $(".project-block").owlCarousel({
   loop:true,
-  margin:48,
+  margin:16,
   center:true,
   nav:true,
   dots:false,
-  items:2,
   navText : ["<i class='fa-thin fa-chevron-left fa-xl'></i>","<i class='fa-thin fa-chevron-right fa-xl'></i>"],
   // autoplay:true,
   //   autoplayTimeout:6000,
   //   autoplayHoverPause:true,
+   responsive:{
+        0:{
+            items:1,
+            nav:false,
+            dots:true,
+        },
+        600:{
+            items:1,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+        }
+    }
 });
 
 $(".fadeOut").owlCarousel({
@@ -86,6 +99,7 @@ $(".fadeOut").owlCarousel({
   autoplay:true,
     autoplayTimeout:4000,
     autoplayHoverPause:true,
+   
 });
 
 // $(".large-advert").owlCarousel({
@@ -101,11 +115,6 @@ $(".fadeOut").owlCarousel({
 //     autoplayHoverPause:true,
 // });
 
-
-new Readmore('article', {
-  speed: 150,
-  collapsedHeight: 105,
-});
 
 
 

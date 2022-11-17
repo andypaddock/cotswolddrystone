@@ -17,6 +17,8 @@
       font-size: 1.75rem;
       color: $color-primary;
       font-weight: 300;
+      text-transform: uppercase;
+      font-family: $default-header;
       .highlight-letter {
         text-transform: uppercase;
         padding-right: 2rem;
@@ -74,7 +76,8 @@
     font-size: 1.65rem;
     color: $color-primary;
     font-weight: 400;
-    text-transform: initial;
+    text-transform: uppercase;
+    font-family: $default-header;
     padding-right: 4rem;
     .highlight-letter {
       text-transform: uppercase;
@@ -82,6 +85,19 @@
       font-weight: 700;
       color: $color-white;
     }
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $color-primary-light;
+    }
+  }
+  &.active::before,
+  &.active::after {
+    background-color: $color-primary-light;
   }
 }
 
@@ -90,10 +106,13 @@
   content: "";
   width: 16px;
   height: 2px;
-  background-color: $color-white;
+  background-color: $color-primary;
   position: absolute;
   transition: all 0.3s ease 0s;
   top: 50%;
+  &:hover {
+    background-color: $color-primary-light;
+  }
 }
 
 .block__title:before {
@@ -103,11 +122,6 @@
 .block__title::after {
   transform: rotate(40deg);
   right: 12px;
-}
-
-.block__title.active::before,
-.block__title.active::after {
-  background-color: $color-primary;
 }
 
 .block__title.active::before {

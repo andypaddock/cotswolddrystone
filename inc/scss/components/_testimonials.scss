@@ -4,6 +4,14 @@
   .row {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
+    @include respond(phone) {
+      display: flex;
+    }
+  }
+  .quote-mark {
+    @include respond(phone) {
+      display: none;
+    }
   }
   .testimonial-carousel {
     display: grid !important;

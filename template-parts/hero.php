@@ -17,3 +17,9 @@ $heroPoster = get_field('video_poster'); ?>
     </div>
 
 </div>
+<div class="bleed-image"><?php
+                            $image = get_field('bottom_image');
+                            if (!empty($image)) : ?>
+    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+    <?php endif; ?>
+</div>

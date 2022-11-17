@@ -141,6 +141,7 @@
         grid-template-columns: 4fr 2fr;
         span {
           padding-right: 25%;
+          font-size: 1rem;
         }
       }
       .footer-newsletter {
@@ -312,15 +313,27 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 5rem 0 0;
+  font-size: 1rem;
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .copyright {
     display: flex;
     align-items: center;
+    @include respond(phone) {
+      order: 2;
+    }
   }
   .silverless {
     text-align: center;
     svg {
       fill: $color-black;
+    }
+    @include respond(phone) {
+      order: 3;
     }
 
     #logo {
@@ -352,6 +365,12 @@
       }
     }
   }
+  .privacy-links {
+    a {
+      font-size: 1rem;
+      color: $color-black;
+    }
+  }
 }
 .footer-links {
   display: grid;
@@ -377,7 +396,20 @@
     ul {
       list-style: none;
       text-align: right;
+      @include respond(phone) {
+        text-align: center;
+      }
     }
+    a {
+      color: $color-black;
+      font-size: 1.4rem;
+    }
+  }
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 5rem;
   }
 }
 #menu-footer {

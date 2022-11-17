@@ -210,6 +210,7 @@
 }
 .top-navbar {
   overflow-x: hidden;
+  display: grid;
   .logo {
     svg {
       height: 5rem;
@@ -219,7 +220,7 @@
     }
   }
   .nav-area {
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .contacts {
@@ -235,19 +236,34 @@
   }
   .menu {
     li {
-      padding: 0 3rem;
+      padding: 0 0 0 3.5rem;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      &::after {
+        content: "\f219";
+        font: var(--fa-font-solid);
+        color: $color-primary-light;
+        font-size: 0.75rem;
+        padding-left: 3.5rem;
+      }
+      &:last-of-type {
+        &::after {
+          content: none;
+        }
+      }
       a {
         color: $color-light-bg;
         font-size: 1.3rem;
-        &::after {
-          content: "";
-          display: block;
-          height: 2px;
-          background: $color-primary;
-          width: 0;
-          transition: all 0.2s ease-in-out;
-        }
+        font-family: $default-header;
+        // &::after {
+        //   content: "";
+        //   display: block;
+        //   height: 2px;
+        //   background: $color-primary;
+        //   width: 0;
+        //   transition: all 0.2s ease-in-out;
+        // }
         &:hover::after {
           width: 100%;
         }
@@ -323,6 +339,8 @@
   position: sticky;
   z-index: 99;
   transition: all 1.5s ease 0s;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding: 1rem 3rem;
 }
 .scrolled .top-navbar {
   top: 1rem;
@@ -336,7 +354,7 @@
   -o-transform: translate3d(0px, 100%, 0px);
 }
 .top-navbar.fixed-menu {
-  top: -55px;
+  top: -7.5rem;
   transition: transform 1.5s ease 0s;
   -webkit-transition: transform 0.3s ease 0s;
   -moz-transition: transform 0.3s ease 0s;

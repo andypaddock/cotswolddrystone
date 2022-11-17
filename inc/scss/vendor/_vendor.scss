@@ -282,14 +282,22 @@
   *display: inline;
 }
 .owl-theme .owl-dots .owl-dot span {
-  width: 10px;
-  height: 10px;
+  // width: 10px;
+  // height: 10px;
+  // margin: 5px 7px;
+  // background: #d6d6d6;
+  // display: block;
+  // -webkit-backface-visibility: visible;
+  // transition: opacity 200ms ease;
+  // border-radius: 30px;
+
+  content: "";
+  height: 0.75rem;
+  width: 0.75rem;
   margin: 5px 7px;
   background: #d6d6d6;
   display: block;
-  -webkit-backface-visibility: visible;
-  transition: opacity 200ms ease;
-  border-radius: 30px;
+  transform: rotate(45deg);
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
@@ -761,4 +769,8 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px;
   }
+}
+#cmplz-cookies-overview .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div,
+#cmplz-document .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div {
+  grid-template-columns: unset;
 }

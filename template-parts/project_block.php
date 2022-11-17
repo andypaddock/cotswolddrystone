@@ -1,5 +1,5 @@
-<section class="section-project-block">
-    <div class="row">
+<section class="section-project-block" id="<?php the_sub_field('section_id'); ?>">
+    <div class="row w70">
 
         <div class="project-block owl-carousel owl-theme">
 
@@ -15,11 +15,15 @@
                 <?php if ($projectType == 'single') : ?>
                 <div class="single-project">
                     <h2 class="heading-tertiary"><?php the_sub_field('content_title'); ?></h2>
-                    <a data-fslightbox="gallery" href="<?php echo esc_url($singleImage['url']); ?>"
-                        title="<?php echo esc_attr($singleImage['caption']); ?>">
-                        <img src="<?php echo esc_url($singleImage['sizes']['large']); ?>"
-                            alt="<?php echo esc_attr($singleImage['alt']); ?>" />
-                    </a>
+                    <div class="single-image">
+                        <span></span>
+                        <a data-fslightbox="gallery" href="<?php echo esc_url($singleImage['url']); ?>"
+                            title="<?php echo esc_attr($singleImage['caption']); ?>">
+                            <img src="<?php echo esc_url($singleImage['sizes']['large']); ?>"
+                                alt="<?php echo esc_attr($singleImage['alt']); ?>" />
+                        </a>
+                        <span></span>
+                    </div>
                 </div>
                 <?php endif; ?>
                 <?php if ($projectType == 'before') : ?>
@@ -27,16 +31,24 @@
                     <h2 class="heading-tertiary">
                         <?php the_sub_field('content_title'); ?></h2>
                     <div class="double-images">
-                        <a data-fslightbox="gallery" href="<?php echo esc_url($beforeImage['url']); ?>"
-                            title="<?php echo esc_attr($beforeImage['caption']); ?>">
-                            <img src="<?php echo esc_url($beforeImage['sizes']['large']); ?>"
-                                alt="<?php echo esc_attr($beforeImage['alt']); ?>" />
-                        </a>
-                        <a data-fslightbox="gallery" href="<?php echo esc_url($afterImage['url']); ?>"
-                            title="<?php echo esc_attr($afterImage['caption']); ?>">
-                            <img src="<?php echo esc_url($afterImage['sizes']['large']); ?>"
-                                alt="<?php echo esc_attr($afterImage['alt']); ?>" />
-                        </a>
+                        <div class="before">
+                            <a data-fslightbox="gallery" href="<?php echo esc_url($beforeImage['url']); ?>"
+                                title="<?php echo esc_attr($beforeImage['caption']); ?>">
+                                <img src="<?php echo esc_url($beforeImage['sizes']['large']); ?>"
+                                    alt="<?php echo esc_attr($beforeImage['alt']); ?>" />
+                            </a>
+                            <h2 class="heading-tertiary__sub">
+                                Before</h2>
+                        </div>
+                        <div class="after">
+                            <a data-fslightbox="gallery" href="<?php echo esc_url($afterImage['url']); ?>"
+                                title="<?php echo esc_attr($afterImage['caption']); ?>">
+                                <img src="<?php echo esc_url($afterImage['sizes']['large']); ?>"
+                                    alt="<?php echo esc_attr($afterImage['alt']); ?>" />
+                            </a>
+                            <h2 class="heading-tertiary__sub">
+                                After</h2>
+                        </div>
                     </div>
                 </div>
                 <?php endif; ?>

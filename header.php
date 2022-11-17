@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo the_title(); ?></title>
     <script src="https://kit.fontawesome.com/fbafb66f14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/wjg4qgd.css">
     <?php wp_head(); ?>
 </head>
 
@@ -31,7 +32,8 @@
 
     <main>
 
-        <div class="logo-mobile"><a href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/radlogo"); ?></a>
+        <div class="logo-mobile"><a
+                href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/radlogoblack"); ?></a>
         </div>
 
 
@@ -70,7 +72,7 @@
                 <ul>
                     <li>
                         <?php
-                        $link = get_field('contact_number','options');
+                        $link = get_field('contact_number', 'options');
                         if ($link) :
                             $link_url = $link['url'];
                             $link_title = $link['title'];
@@ -82,7 +84,7 @@
                     </li>
                     <li>
                         <?php
-                        $link = get_field('email_address','options');
+                        $link = get_field('email_address', 'options');
                         if ($link) :
                             $link_url = $link['url'];
                             $link_title = $link['title'];

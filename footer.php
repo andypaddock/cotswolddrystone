@@ -11,7 +11,7 @@
             <div class="footer-text-container">
 
                 <div class="row">
-                    <div class="footer-contact">
+                    <div class="footer-contact" id="contact">
 
                         <div class="footer-newsletter">
 
@@ -109,6 +109,35 @@
         'list_item_class'  => 'sidebar-item',
         'link_class'   => 'sidebar-anchor'
     )); ?>
+    <div class="contacts">
+        <ul>
+            <li>
+                <?php
+                $link = get_field('contact_number', 'options');
+                if ($link) :
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                ?>
+                <a href="<?php echo esc_url($link_url); ?>"
+                    target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                <?php endif; ?>
+            </li>
+            <li>
+                <?php
+                $link = get_field('email_address', 'options');
+                if ($link) :
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                ?>
+                <a href="<?php echo esc_url($link_url); ?>"
+                    target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                <?php endif; ?>
+            </li>
+        </ul>
+
+    </div>
 </div>
 
 

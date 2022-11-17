@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $default-font;
   line-height: 1.7;
 }
 
@@ -7,7 +7,7 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
-
+  font-family: $default-header;
   &--main {
     display: block;
     font-size: 5rem;
@@ -44,10 +44,11 @@ body {
 
 .heading-secondary {
   font-size: 3rem;
+  font-family: $default-header;
   text-transform: uppercase;
   font-weight: 200;
   display: inline-block;
-  color: $color-primary;
+  color: $color-black;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
   line-height: 1.1;
@@ -77,9 +78,11 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 200;
   text-transform: uppercase;
+  font-family: $default-header;
+  line-height: 1.4;
   &.light {
     font-weight: 200;
   }

@@ -7,7 +7,7 @@
 <section class="testimonial-slider">
 
     <div class="row">
-        <div class="quote"><?php
+        <div class="quote-mark"><?php
                             $image = get_field('quote_left', 'options');
                             if (!empty($image)) : ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
@@ -44,7 +44,7 @@
             target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
         <?php endif; ?>
         <?php endif; ?>
-        <div class="quote"><?php
+        <div class="quote-mark"><?php
                             $image = get_field('quote_right', 'options');
                             if (!empty($image)) : ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
