@@ -21,7 +21,7 @@
                         style="background-image: url(<?php echo $image['sizes']['large']; ?>)">
                         &nbsp;
                     </div>
-                    <div class="content-title no-mob">
+                    <div class="content-title">
                         <h2 class="heading-tertiary"><?php the_sub_field('content_title'); ?></h2>
                     </div>
                     <div class="card__details">
@@ -30,11 +30,10 @@
                 </div>
                 <div class="card__side card__side--back card__side--back-1">
                     <div class="card__cta">
-
                         <div class="content-text">
                             <?php the_sub_field('content_text'); ?><?php
-                                                                                                    $image = get_sub_field('text_icon');
-                                                                                                    if (!empty($image)) : ?>
+                                                                            $image = get_sub_field('text_icon');
+                                                                            if (!empty($image)) : ?>
                             <img src="<?php echo esc_url($image['url']); ?>"
                                 alt="<?php echo esc_attr($image['alt']); ?>" />
                             <?php endif; ?>

@@ -296,8 +296,7 @@ main {
 a {
   color: #b9bfba;
   font-weight: 400;
-  text-decoration: none;
-  /* no underline */
+  text-decoration: none; /* no underline */
 }
 
 @media only screen and (max-width: 75em) {
@@ -1220,11 +1219,8 @@ blockquote {
   color: #fff;
 }
 
-.project-block {
-  max-height: 60vh;
-}
 .project-block.owl-carousel .owl-item img {
-  max-width: 100%;
+  min-width: 100%;
   height: 28rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1248,6 +1244,20 @@ blockquote {
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .project-block__item .before-after .double-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project-block__item .before-after .double-images img {
+    max-height: 20rem;
+  }
+}
 .project-block.owl-carousel .owl-stage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1260,7 +1270,6 @@ blockquote {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1269,8 +1278,7 @@ blockquote {
 .project-block .before-after {
   position: relative;
   overflow: hidden;
-  /* margin-bottom: 80px; */
-  /*This is optional*/
+  /* margin-bottom: 80px; */ /*This is optional*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1354,6 +1362,7 @@ blockquote {
   padding: 12px 16px;
   border: 0;
   background: rgb(255, 255, 255);
+  font-family: "Open Sans", sans-serif;
 }
 
 .wpcf7-form ::-webkit-input-placeholder {
@@ -2179,7 +2188,7 @@ span.wpcf7-not-valid-tip {
 }
 .testimonial-slider .copy {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 2rem 0;
@@ -2611,7 +2620,7 @@ span.wpcf7-not-valid-tip {
 }
 .footer__link:link, .footer__link:visited {
   color: #f7f7f7;
-  background-color: #333;
+  background-color: #2d3130;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -3042,6 +3051,13 @@ span.wpcf7-not-valid-tip {
   color: #00212a;
   font-size: 1.4rem;
 }
+.footer-links .contacts a i {
+  color: #e6763e;
+  padding-left: 0.5rem;
+}
+.footer-links .contacts a:hover {
+  color: #e6763e;
+}
 @media only screen and (max-width: 37.5em) {
   .footer-links {
     display: -webkit-box;
@@ -3313,8 +3329,7 @@ footer .w90 {
   -webkit-animation: quote-fade 3s 1;
   animation-fill-mode: forwards;
   animation-delay: 4s;
-  -webkit-animation-delay: 4s;
-  /* Safari and Chrome */
+  -webkit-animation-delay: 4s; /* Safari and Chrome */
   -webkit-animation-fill-mode: forwards;
 }
 .text-fade blockquote:nth-of-type(2) {
@@ -3323,8 +3338,7 @@ footer .w90 {
   -webkit-animation: quote-fade-in 3s 1;
   animation-fill-mode: forwards;
   animation-delay: 6s;
-  -webkit-animation-delay: 6s;
-  /* Safari and Chrome */
+  -webkit-animation-delay: 6s; /* Safari and Chrome */
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -3790,7 +3804,7 @@ footer .w90 {
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 3rem;
   height: 2px;
-  background-color: #333;
+  background-color: #2d3130;
   display: inline-block;
 }
 .navigation__icon::before, .navigation__icon::after {
@@ -3906,6 +3920,7 @@ footer .w90 {
 }
 .top-navbar .contacts ul li a {
   font-weight: 200;
+  color: #2d3130;
 }
 .top-navbar .menu li {
   padding: 0 0 0 3.5rem;
@@ -3928,7 +3943,7 @@ footer .w90 {
   content: none;
 }
 .top-navbar .menu li a {
-  color: #b8bfba;
+  color: #2d3130;
   font-size: 1.3rem;
   font-family: "classico-urw", sans-serif;
 }
@@ -4953,21 +4968,17 @@ img.mfp-img {
     padding-left: 0;
     padding-right: 0;
   }
-
   .mfp-img-mobile img.mfp-img {
     padding: 0;
   }
-
   .mfp-img-mobile .mfp-figure:after {
     top: 0;
     bottom: 0;
   }
-
   .mfp-img-mobile .mfp-figure small {
     display: inline;
     margin-left: 5px;
   }
-
   .mfp-img-mobile .mfp-bottom-bar {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
@@ -4978,16 +4989,13 @@ img.mfp-img {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-
   .mfp-img-mobile .mfp-bottom-bar:empty {
     padding: 0;
   }
-
   .mfp-img-mobile .mfp-counter {
     right: 5px;
     top: 3px;
   }
-
   .mfp-img-mobile .mfp-close {
     top: 0;
     right: 0;
@@ -5005,17 +5013,14 @@ img.mfp-img {
     -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
-
   .mfp-arrow-left {
     -webkit-transform-origin: 0;
     transform-origin: 0;
   }
-
   .mfp-arrow-right {
     -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
-
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px;

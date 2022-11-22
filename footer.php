@@ -68,6 +68,24 @@
                                     target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                                 <?php endif; ?>
                             </li>
+                            <?php if (have_rows('social_media_links', 'options')) : ?>
+
+                            <?php while (have_rows('social_media_links', 'options')) : the_row(); ?>
+                            <li>
+                                <?php
+                                        $link = get_sub_field('link');
+                                        if ($link) :
+                                            $link_url = $link['url'];
+                                            $link_title = $link['title'];
+                                            $link_target = $link['target'] ? $link['target'] : '_self';
+                                        ?>
+                                <a href="<?php echo esc_url($link_url); ?>"
+                                    target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?><?php the_sub_field('font_awesome_icon', 'options'); ?></a>
+                                <?php endif; ?>
+                            </li>
+                            <?php endwhile; ?>
+
+                            <?php endif; ?>
                         </ul>
 
                     </div>
@@ -135,6 +153,12 @@
                     target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                 <?php endif; ?>
             </li>
+
+
+
+
+
+
         </ul>
 
     </div>

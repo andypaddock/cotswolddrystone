@@ -230,6 +230,7 @@
       li {
         a {
           font-weight: 200;
+          color: $color-grey-dark-3;
         }
       }
     }
@@ -253,7 +254,7 @@
         }
       }
       a {
-        color: $color-light-bg;
+        color: $color-grey-dark-3;
         font-size: 1.3rem;
         font-family: $default-header;
         // &::after {

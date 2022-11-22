@@ -403,6 +403,13 @@
     a {
       color: $color-black;
       font-size: 1.4rem;
+      i {
+        color: $color-primary-light;
+        padding-left: 0.5rem;
+      }
+      &:hover {
+        color: $color-primary-light;
+      }
     }
   }
   @include respond(phone) {
