@@ -41,7 +41,7 @@
       color: $color-white;
     }
     @include respond(phone) {
-      -webkit-line-clamp: 10;
+      -webkit-line-clamp: 14;
     }
   }
   .quote-cite {

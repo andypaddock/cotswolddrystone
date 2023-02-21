@@ -2199,7 +2199,7 @@ span.wpcf7-not-valid-tip {
 }
 @media only screen and (max-width: 37.5em) {
   .testimonial-slider .copy {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 14;
   }
 }
 .testimonial-slider .quote-cite {
